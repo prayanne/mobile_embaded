@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button button1 = (Button) findViewById(R.id.go);
         Button button2 = (Button) findViewById(R.id.gocalc);
+        Button button3 = (Button) findViewById(R.id.gobutton);
+        Button button4 = (Button) findViewById(R.id.goToast);
         TextView text1 = (TextView) findViewById(R.id.countInt);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
             Intent intent = new Intent(MainActivity.this, calc.class);
             startActivity(intent);
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, checkbox.class);
+                startActivity(intent);
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, PracToast.class);
+                startActivity(intent);
             }
         });
     }

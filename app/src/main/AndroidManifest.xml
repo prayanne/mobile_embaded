@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Chk_java"
         tools:targetApi="31">
         <activity
+            android:name=".PracToast"
+            android:exported="false" />
+        <activity
+            android:name=".checkbox"
+            android:exported="false" />
+        <activity
             android:name=".calc"
             android:exported="false" />
         <activity

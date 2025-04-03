@@ -101,5 +101,15 @@
             android:layout_height="wrap_content"
             android:text="calc"
             android:id="@+id/gocalc"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="butn"
+            android:id="@+id/gobutton"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            android:id="@+id/goToast"/>
     </LinearLayout>
 </LinearLayout>
