@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ public class PracToast extends AppCompatActivity {
 
         final Button button1 = (Button) findViewById(R.id.ToastBtn);
         final Button button2 = (Button) findViewById(R.id.alertBtn);
+        final Button button3 = (Button) findViewById(R.id.adaptDialog);
         TextView DMsg = (TextView) findViewById(R.id.DMsg);
 
         button1.setOnClickListener(new View.OnClickListener(){
@@ -66,6 +68,47 @@ public class PracToast extends AppCompatActivity {
                     }
                 });
 
+                dlg.show();
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView nameSpace = (TextView) findViewById(R.id.nameSpace);
+                TextView emailSpace = (TextView) findViewById(R.id.emailSpace);
+
+                TextView output = (TextView) findViewById(R.id.toastText1);
+
+                View dialogView = (View) View.inflate(PracToast.this, R.layout.dialog1, null);
+
+                AlertDialog.Builder dlg = new AlertDialog.Builder(PracToast.this);
+
+                dlg.setTitle("Input User Data");
+                dlg.setIcon(R.drawable.ic_menu_allfriends);
+                dlg.setView(dialogView);
+                dlg.setPositiveButton("Check", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        EditText text1 = (EditText) dialogView.findViewById(R.id.dlgEdt1);
+                        EditText text2 = (EditText) dialogView.findViewById(R.id.dlgEdt2);
+                        nameSpace.setText(text1.getText().toString());
+                        emailSpace.setText(text2.getText().toString());
+                    }
+                });
+                dlg.setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast toast = new Toast(PracToast.this);
+                        View toastView = (View) View.inflate(PracToast.this, R.layout.toast, null);
+                        TextView toastText = (TextView) toastView.findViewById(R.id.toastText1);
+
+                        toast.setView(toastView);
+                        toastText.setText("cancled");
+                        toast.show();
+
+                    }
+                });
                 dlg.show();
             }
         });
