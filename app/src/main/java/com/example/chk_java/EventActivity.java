@@ -15,6 +15,7 @@ public class EventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_event);
         View vw = new MyView(this);
+        vw.setOnTouchListener(TouchListner);
         setContentView(vw);
     }
 
@@ -22,10 +23,24 @@ public class EventActivity extends AppCompatActivity {
         public MyView(Context context) {
             super(context);
         }
-        @Override
-        public boolean onTouchEvent(MotionEvent event){
-            super.onTouchEvent(event);
+//        @Override
+//        public boolean onTouchEvent(MotionEvent event){
+//            super.onTouchEvent(event);
+//
+//            if(event.getAction() == MotionEvent.ACTION_DOWN){
+//                Toast.makeText(EventActivity.this, "Touch Down", Toast.LENGTH_SHORT).show();
+//                return true;
+//            } else if (event.getAction() == MotionEvent.ACTION_UP){
+//                Toast.makeText(EventActivity.this, "Touch Up", Toast.LENGTH_SHORT).show();
+//                return true;
+//            }
+//            return false;
+//        }
+    }
+    public class TouchListnerClass implements View.OnTouchListener {
 
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
             if(event.getAction() == MotionEvent.ACTION_DOWN){
                 Toast.makeText(EventActivity.this, "Touch Down", Toast.LENGTH_SHORT).show();
                 return true;
@@ -36,4 +51,5 @@ public class EventActivity extends AppCompatActivity {
             return false;
         }
     }
+    TouchListnerClass TouchListner = new TouchListnerClass();
 }
