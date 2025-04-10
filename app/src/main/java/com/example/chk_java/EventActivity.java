@@ -30,7 +30,7 @@ public class EventActivity extends AppCompatActivity {
                 Toast.makeText(EventActivity.this, "Touch Down", Toast.LENGTH_SHORT).show();
                 return true;
             } else if (event.getAction() == MotionEvent.ACTION_UP){
-                Toast.makeText(EventActivity.this, "Touch Down", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EventActivity.this, "Touch Up", Toast.LENGTH_SHORT).show();
                 return true;
             }
             return false;
