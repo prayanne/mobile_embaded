@@ -5,18 +5,33 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
+    android:background="#9898D0"
     tools:context=".EventActivity">
 
     <TextView
+        android:id="@+id/evnet_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="hi"
-        android:id="@+id/evnet_textView"/>
+        android:gravity="center"
+        android:text="운송수단"
+        android:textColor="#5FFF3F"
+        android:textSize="40sp" />
+
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/event_button_car"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="button"
-        android:id="@+id/event_button"/>
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="자동차" />
+    <Button
+        android:id="@+id/event_button_airplane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="비행기" />
 
 </LinearLayout>
