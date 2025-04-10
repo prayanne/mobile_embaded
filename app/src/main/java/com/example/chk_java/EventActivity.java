@@ -32,8 +32,8 @@ public class EventActivity extends AppCompatActivity {
         Button buttonCar = (Button) findViewById(R.id.event_button_car);
         Button buttonAir = (Button) findViewById(R.id.event_button_airplane);
 
-        buttonCar.setOnClickListener(mClickLister);
-        buttonAir.setOnClickListener(mClickLister);
+//        buttonCar.setOnClickListener(mClickLister);
+//        buttonAir.setOnClickListener(mClickLister);
 
 
 //        setContentView(tv);
@@ -45,6 +45,10 @@ public class EventActivity extends AppCompatActivity {
             else if(v.getId() == R.id.event_button_airplane) { tv.setText("비행기"); }
         }
     };
+    public void mOnClick(View v){
+        if(v.getId() == R.id.event_button_car){ tv.setText("자동차"); }
+        else if(v.getId() == R.id.event_button_airplane) { tv.setText("비행기"); }
+    }
 
 
 

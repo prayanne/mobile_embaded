@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
+        android:onClick="mOnClick"
         android:text="자동차" />
     <Button
         android:id="@+id/event_button_airplane"
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:gravity="center"
+        android:onClick="mOnClick"
         android:text="비행기" />
 
 </LinearLayout>
