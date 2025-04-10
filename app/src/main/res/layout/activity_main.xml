@@ -111,5 +111,10 @@
             android:layout_height="wrap_content"
             android:text="Toast"
             android:id="@+id/goToast"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:id="@+id/goEvnet"/>
     </LinearLayout>
 </LinearLayout>
