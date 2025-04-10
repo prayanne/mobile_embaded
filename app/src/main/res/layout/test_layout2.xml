@@ -31,10 +31,22 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/layoutCenter"
-        android:layout_toLeftOf="@+id/layoutCenter"
+        android:layout_alignTop="@+id/layoutTopLeft"
+        android:layout_toRightOf="@+id/layoutCenter"
         android:text="4"
         android:id="@+id/layoutBtn4"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/layoutCenter"
+        android:layout_alignParentRight="true"
+        android:text="5"
+        android:id="@+id/layoutBtn5"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TopLeft"
+        android:id="@+id/layoutTopLeft"/>
     <Button
         android:layout_width="150dp"
         android:layout_height="150dp"
