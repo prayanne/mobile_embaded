@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Chk_java"
         tools:targetApi="31">
         <activity
+            android:name=".TestLayout1Activity"
+            android:exported="false" />
+        <activity
             android:name=".EventActivity"
             android:exported="false" />
         <activity

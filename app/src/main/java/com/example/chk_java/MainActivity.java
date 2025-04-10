@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         tv1.setText("hi");
 
         tv2.setTextSize(20);
-        tv2.setText("투명 드래곤이 울부짖었다!!!투명 드래곤이 울부짖었다!!!투명 드래곤이 울부짖었다!!!투명 드래곤이 울부짖었다!!!투명 드래곤이 울부짖었다!!!투명 드래곤이 울부짖었다!!!투명 드래곤이 울부짖었다!!!");
+        tv2.setText("asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf");
         tv2.setSingleLine(true);
 
         tv3.setTypeface(Typeface.SANS_SERIF);
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Button button3 = (Button) findViewById(R.id.gobutton);
         Button button4 = (Button) findViewById(R.id.goToast);
         Button button5 = (Button) findViewById(R.id.goEvnet);
+        Button button6 = (Button) findViewById(R.id.goLayout);
         TextView text1 = (TextView) findViewById(R.id.countInt);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this, EventActivity.class);
+                startActivity(intent);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, TestLayout1Activity.class);
                 startActivity(intent);
             }
         });
