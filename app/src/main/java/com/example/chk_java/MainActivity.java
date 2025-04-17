@@ -33,15 +33,32 @@ public class MainActivity extends AppCompatActivity {
 
         tv3.setTypeface(Typeface.SANS_SERIF);
 
-
         Button button1 = (Button) findViewById(R.id.go);
         Button button2 = (Button) findViewById(R.id.gocalc);
         Button button3 = (Button) findViewById(R.id.gobutton);
         Button button4 = (Button) findViewById(R.id.goToast);
         Button button5 = (Button) findViewById(R.id.goEvnet);
         Button button6 = (Button) findViewById(R.id.goLayout);
+        Button button7 = (Button) findViewById(R.id.goPoem);
         TextView text1 = (TextView) findViewById(R.id.countInt);
 
+        Button[] buttons = {
+                button1,
+                button2,
+                button3,
+                button4,
+                button5,
+                button6,
+                button7
+        };
+
+//        for (Button btn: buttons
+//             ) {
+//            btn.setOnClickListener(new View.OnClickListener() {
+//
+//            });
+//        }
+        
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
@@ -83,6 +100,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this, TestLayout1Activity.class);
+                startActivity(intent);
+            }
+        });
+        button7.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 startActivity(intent);
             }
         });

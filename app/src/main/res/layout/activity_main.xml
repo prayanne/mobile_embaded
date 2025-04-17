@@ -121,5 +121,10 @@
             android:layout_height="wrap_content"
             android:text="Layout"
             android:id="@+id/goLayout"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poem"
+            android:id="@+id/goPoem"/>
     </LinearLayout>
 </LinearLayout>
