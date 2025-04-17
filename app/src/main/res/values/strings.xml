@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Gallery</string>
+    <string name="drawer1">고흐</string>
+    <string name="drawable1">고흐 작품1</string>
+    <string name="detail1">장황한 설명1</string>
+
+    <string name="drawer2">고흐</string>
+    <string name="drawable2">고흐 작품2</string>
+    <string name="detail2">장황한 설명2</string>
 </resources>
