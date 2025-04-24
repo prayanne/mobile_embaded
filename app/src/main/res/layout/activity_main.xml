@@ -39,6 +39,37 @@
         android:layout_height="wrap_content"
         android:text="photo"
         android:id="@+id/btnPhoto"/>
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt1num"
+        android:inputType="text"
+        android:hint="1"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt2num"
+        android:inputType="text"
+        android:hint="2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="calc"
+        android:id="@+id/btnCalc"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scoll"
+        android:id="@+id/btnScoll"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="filpper"
+        android:id="@+id/btnViewF"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actionbar"
+        android:id="@+id/btnAction"/>
 
 </LinearLayout>

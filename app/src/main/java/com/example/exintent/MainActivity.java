@@ -1,5 +1,7 @@
 package com.example.exintent;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.app.SearchManager;
 import android.content.Intent;
 import android.net.Uri;
@@ -7,12 +9,16 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import javax.xml.transform.Result;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
         Button button4 = (Button) findViewById(R.id.btnSearch);
         Button button5 = (Button) findViewById(R.id.btnSms);
         Button button6 = (Button) findViewById(R.id.btnPhoto);
+        Button button7 = (Button) findViewById(R.id.btnCalc);
+        Button button8 = (Button) findViewById(R.id.btnScoll);
+        Button button9 = (Button) findViewById(R.id.btnViewF);
+        Button button10 = (Button) findViewById(R.id.btnAction);
+
+
 
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -82,6 +94,47 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        button7.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                EditText edt1  = (EditText)findViewById(R.id.edt1num);
+                EditText edt2  = (EditText)findViewById(R.id.edt2num);
+                Intent intent = new Intent(getApplicationContext(), CalcActivity.class);
+                intent.putExtra("num1", Integer.parseInt(edt1.getText().toString()));
+                intent.putExtra("num2", Integer.parseInt(edt2.getText().toString()));
+                startActivityForResult(intent, 0);
+            }
+        });
+        button8.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), ScrollActivity.class);
+                startActivity(intent);
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), ViewFlipperActivity.class);
+                startActivity(intent);
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getApplicationContext(), ActionBarActivity.class);
+                startActivity(intent);
+            }
+        });
 
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+//        super.onActivityResult();
+        if(resultCode == RESULT_OK){
+            int hap = data.getIntExtra("Hap", 0);
+            Toast.makeText(getApplicationContext(), "합계: " + hap, Toast.LENGTH_SHORT).show();
+        }
     }
 }
