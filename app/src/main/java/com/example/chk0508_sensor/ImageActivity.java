@@ -37,6 +37,8 @@ public class ImageActivity extends AppCompatActivity {
                 binding.imageSmile.setX(x);
                 binding.imageSmile.setY(y);
         }
+        binding.imageViewing.setText("x: "+ x + ", y: " + y);
         return false;
     }
+
 }
