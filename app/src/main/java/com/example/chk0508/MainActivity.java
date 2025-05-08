@@ -2,6 +2,7 @@ package com.example.chk0508;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
+        registerForContextMenu(binding.btnBack);
+        registerForContextMenu(binding.btnButton);
+
         binding.btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +63,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+
+        MenuInflater menuInflater = getMenuInflater();
+
+        if(v == binding.btnBack){
+            menu.setHeaderTitle("cng Background");
+            menuInflater.inflate(R.menu.menu_back, menu);
+        }
+        else if(v == binding.btnButton) {
+//            menuInflater.inflate(R.menu.menu_btn, menu);
+            menu.add(0,1,0,"btn45");
+            menu.add(0,2,0, "btnx2");
+        }
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.backR)          { binding.main.setBackgroundColor(Color.RED); return true;}
         else if(item.getItemId() == R.id.backB)     { binding.main.setBackgroundColor(Color.BLUE); return true;}
@@ -67,6 +88,19 @@ public class MainActivity extends AppCompatActivity {
         else if(item.getItemId() == R.id.subRotate) { binding.btn1.setRotation(45); return true;}
         else if(item.getItemId() == R.id.subSize)   { binding.btn1.setScaleX(2); return true;}
 
+        return false;
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.menu_backR2)        { binding.main.setBackgroundColor(Color.RED); return true;}
+        else if(item.getItemId() == R.id.menu_backB2)   { binding.main.setBackgroundColor(Color.BLUE); return true;}
+        else if(item.getItemId() == R.id.menu_backG2)   { binding.main.setBackgroundColor(Color.GREEN); return true;}
+
+//        else if(item.getItemId() == R.id.menu_btnR452)  { binding.btn1.setRotation(45); return true;}
+//        else if(item.getItemId() == R.id.menu_btnX2)    { binding.btn1.setScaleX(2); return true;}
+        else if(item.getItemId() == 1)  { binding.btn1.setRotation(45); return true;}
+        else if(item.getItemId() == 2)  { binding.btn1.setScaleX(2); return true;}
         return false;
     }
 }

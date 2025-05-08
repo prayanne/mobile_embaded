@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="btnR45"
+        android:id="@+id/menu_btnR452"/>
+    <item
+        android:title="btnX2"
+        android:id="@+id/menu_btnX2"/>
+</menu>
