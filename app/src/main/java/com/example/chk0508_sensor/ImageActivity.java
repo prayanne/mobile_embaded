@@ -54,8 +54,6 @@ public class ImageActivity extends AppCompatActivity {
             case MotionEvent.ACTION_MOVE:
                 img.setX(x);
                 img.setY(y);
-                prev_x = x - img.getWidth();
-                prev_y = y - img.getHeight();
                 break;
 
             case MotionEvent.ACTION_DOWN:
