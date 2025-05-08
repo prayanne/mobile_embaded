@@ -6,20 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".ImageActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/touch_guide"
-        android:textStyle="bold"
-        android:textSize="40sp"
-        android:id="@+id/text_viewing"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/goImage"
-        android:text="goImage"/>
-
+        android:src="@drawable/smile"
+        android:id="@+id/image_smile"/>
 </LinearLayout>
