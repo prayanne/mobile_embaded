@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="backR"
+        android:id="@+id/backR"/>
+
+    <item
+        android:title="backG"
+        android:id="@+id/backG"/>
+    <item
+        android:title="backB"
+        android:id="@+id/backB"/>
+    <item android:title="cng Btn">
+        <menu>
+            <item
+                android:id="@+id/subRotate"
+                android:title="45R"/>
+            <item
+                android:id="@+id/subSize"
+                android:title="2x"/>
+        </menu>
+    </item>
+</menu>
