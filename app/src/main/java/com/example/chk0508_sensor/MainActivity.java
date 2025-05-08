@@ -32,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        binding.goSensor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SensorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
